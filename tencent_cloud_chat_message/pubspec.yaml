@@ -27,7 +27,7 @@ dependencies:
   flutter_list_view: ^1.1.18
   tencent_cloud_chat: ^1.4.0+1
   tencent_cloud_chat_common: ^1.4.0
-  http: ^1.1.0
+  http: ^1.2.0
   card_swiper: ^3.0.1
   better_player_plus: ^1.0.5
   open_file: ^3.3.2

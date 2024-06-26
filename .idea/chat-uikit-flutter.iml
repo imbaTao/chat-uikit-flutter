@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_common/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_common/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_common/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_contact/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_contact/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_contact/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_conversation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_conversation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_conversation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_group_profile/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_group_profile/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_group_profile/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_intl/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_intl/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_intl/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_message/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_message/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_message/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_push/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_robot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_robot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_robot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_search/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_search/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_search/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_sticker/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_sticker/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_sticker/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_user_profile/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_user_profile/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_user_profile/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/tencent_cloud_chat_vote_plugin/example/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
