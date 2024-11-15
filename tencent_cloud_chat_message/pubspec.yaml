@@ -26,7 +26,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   flutter_list_view: ^1.1.18
   tencent_cloud_chat: ^1.4.0+1
-  tencent_cloud_chat_common: ^1.4.0
+  tencent_cloud_chat_common: ^1.6.2
   http: ^1.2.0
   card_swiper: ^3.0.1
   better_player_plus: ^1.0.5
