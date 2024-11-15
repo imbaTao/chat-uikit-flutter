@@ -18,7 +18,7 @@ platforms:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^0.8.9
+  image_picker: ^1.1.2
   record: ^5.0.5
   record_android: '>=1.1.0 <=1.2.1'
   fc_native_video_thumbnail: ^0.7.0
@@ -38,7 +38,7 @@ dependencies:
   url_launcher: ^6.2.2
   desktop_drop_for_t: ^0.4.6
   dotted_border: ^2.1.0
-  package_info_plus: ^8.0.0
+  package_info_plus: ^8.0.2
   flutter_markdown: ^0.7.1
   extended_text: ^13.0.0
   extended_text_field: ^15.0.0
