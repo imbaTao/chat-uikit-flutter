@@ -722,7 +722,6 @@ class TencentCloudChatMessageSeparateDataProvider extends ChangeNotifier {
       snapshotPath = "${(await getTemporaryDirectory()).path}${Pertypath().basename(videoPath ?? "")}.jpeg";
       await plugin.getVideoThumbnail(
         srcFile: videoPath ?? "",
-        keepAspectRatio: true,
         destFile: snapshotPath,
         format: 'jpeg',
         width: 128,
