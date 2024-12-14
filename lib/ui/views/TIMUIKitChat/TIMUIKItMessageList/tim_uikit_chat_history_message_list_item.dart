@@ -61,6 +61,9 @@ typedef MessageRowBuilder = Widget? Function(
 typedef MessageNickNameBuilder = Widget Function(
     BuildContext context, V2TimMessage message, TUIChatSeparateViewModel model);
 
+typedef MessageTimeStampBuilder = Widget Function(
+    BuildContext context, V2TimMessage message);
+
 typedef MessageItemContent = Widget? Function(
   V2TimMessage message,
   bool isShowJump,
@@ -118,6 +121,9 @@ class MessageItemBuilder {
   /// message nick name builder
   final MessageNickNameBuilder? messageNickNameBuilder;
 
+  // time builder -- hdx
+  final MessageTimeStampBuilder? messageTimeBuilder;
+
   MessageItemBuilder({
     this.locationMessageItemBuilder,
     this.textMessageItemBuilder,
@@ -132,6 +138,7 @@ class MessageItemBuilder {
     this.mergerMessageItemBuilder,
     this.messageRowBuilder,
     this.messageNickNameBuilder,
+    this.messageTimeBuilder,
   });
 }
 
@@ -942,7 +949,6 @@ class _TIMUIKItHistoryMessageListItemState
   Widget _getMessageItemBuilder(V2TimMessage message, int? messageStatues,
       TUIChatSeparateViewModel model) {
     final messageBuilder = _messageItemBuilder;
-
     return messageBuilder(widget.message, model);
   }
 
@@ -1237,6 +1243,10 @@ class _TIMUIKItHistoryMessageListItemState
     final isDesktopScreen =
         TUIKitScreenUtils.getFormFactor(context) == DeviceType.Desktop;
     if (isTimeDivider) {
+      // 使用自定义时间样式
+      if (widget.messageItemBuilder?.messageTimeBuilder != null) {
+        return widget.messageItemBuilder!.messageTimeBuilder!(context, message);
+      }
       return _timeDividerBuilder(theme, message.timestamp ?? 0, model);
     }
     if (isLatestDivider) {

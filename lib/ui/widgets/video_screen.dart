@@ -125,7 +125,7 @@ class _VideoScreenState extends TIMUIKitState<VideoScreen> {
         }
         File f = File(savePath);
         if (f.existsSync()) {
-          var result = await ImageGallerySaver.saveFile(savePath);
+          var result = await ImageGallerySaverPlus.saveFile(savePath);
           if (PlatformUtils().isIOS) {
             if (result['isSuccess']) {
               onTIMCallback(TIMCallback(
@@ -160,7 +160,7 @@ class _VideoScreenState extends TIMUIKitState<VideoScreen> {
       }
       return;
     }
-    var result = await ImageGallerySaver.saveFile(savePath);
+    var result = await ImageGallerySaverPlus.saveFile(savePath);
     if (PlatformUtils().isIOS) {
       if (result['isSuccess']) {
         onTIMCallback(TIMCallback(
