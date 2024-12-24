@@ -100,6 +100,9 @@ class TIMUIKitInputTextField extends StatefulWidget {
 
   final String? groupID;
 
+
+  
+
   const TIMUIKitInputTextField(
       {Key? key,
       required this.conversationID,
@@ -112,6 +115,11 @@ class TIMUIKitInputTextField extends StatefulWidget {
       this.showSendAudio = true,
       this.showSendEmoji = true,
       this.showMorePanel = true,
+
+
+
+
+
       this.backgroundColor,
       this.controller,
       this.onChanged,

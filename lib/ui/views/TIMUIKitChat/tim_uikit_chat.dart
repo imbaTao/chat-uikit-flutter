@@ -570,64 +570,73 @@ class _TUIChatState extends TIMUIKitState<TIMUIKitChat> {
                                 )),
                           )),
                           widget.inputTopBuilder ?? Container(),
-                          // Selector<TUIChatSeparateViewModel, bool>(
-                          //   builder: (context, value, child) {
-                          //     return value
-                          //         ? MultiSelectPanel(
-                          //             conversationType: _getConvType(),
-                          //           )
-                          //         : (widget.textFieldBuilder != null
-                          //             ? widget.textFieldBuilder!(context)
-                          //             : TIMUIKitInputTextField(
-                          //                 chatConfig: widget.config,
-                          //                 groupID: widget.groupID,
-                          //                 atMemberPanelScroll:
-                          //                     atMemberPanelScroll,
-                          //                 groupType:
-                          //                     widget.conversation.groupType,
-                          //                 currentConversation:
-                          //                     widget.conversation,
-                          //                 model: model,
-                          //                 controller: textFieldController,
-                          //                 customEmojiStickerList:
-                          //                     customImageSmallPngEmojiPackages,
-                          //                 isUseDefaultEmoji:
-                          //                     widget.config!.isUseDefaultEmoji,
-                          //                 customStickerPanel:
-                          //                     widget.customStickerPanel,
-                          //                 morePanelConfig:
-                          //                     widget.morePanelConfig,
-                          //                 scrollController: autoController,
-                          //                 conversationID: _getConvID(),
-                          //                 conversationType: _getConvType(),
-                          //                 initText: TencentUtils.checkString(
-                          //                         widget.draftText) ??
-                          //                     (PlatformUtils().isWeb
-                          //                         ? TencentUtils.checkString(
-                          //                             conversationViewModel
-                          //                                 .getWebDraft(
-                          //                                     conversationID: widget
-                          //                                         .conversation
-                          //                                         .conversationID))
-                          //                         : TencentUtils.checkString(
-                          //                             widget.conversation
-                          //                                 .draftText)),
-                          //                 hintText: widget.textFieldHintText,
-                          //                 showMorePanel: widget.config
-                          //                         ?.isAllowShowMorePanel ??
-                          //                     true,
-                          //                 showSendAudio: widget.config
-                          //                         ?.isAllowSoundMessage ??
-                          //                     true,
-                          //                 showSendEmoji: widget
-                          //                         .config?.isAllowEmojiPanel ??
-                          //                     true,
-                          //               ));
-                          //   },
-                          //   selector: (c, model) {
-                          //     return model.isMultiSelect;
-                          //   },
-                          // )
+                          Selector<TUIChatSeparateViewModel, bool>(
+                            builder: (context, value, child) {
+                              return (widget.textFieldBuilder != null
+                                  ? widget.textFieldBuilder!(context)
+                                  : Container(
+                                      padding: EdgeInsets.only(
+                                        top: 2,
+                                      ),
+                                      decoration: const BoxDecoration(
+                                        border: Border(
+                                          top: BorderSide(
+                                            color: Color(0xFFEEEEEE),
+                                            width: 1.0,
+                                          ),
+                                        ),
+                                      ),
+                                      child: TIMUIKitInputTextField(
+                                        backgroundColor: Colors.white,
+                                        chatConfig: widget.config,
+                                        groupID: widget.groupID,
+                                        atMemberPanelScroll:
+                                            atMemberPanelScroll,
+                                        groupType:
+                                            widget.conversation.groupType,
+                                        currentConversation:
+                                            widget.conversation,
+                                        model: model,
+                                        controller: textFieldController,
+                                        customEmojiStickerList:
+                                            customImageSmallPngEmojiPackages,
+                                        isUseDefaultEmoji:
+                                            widget.config!.isUseDefaultEmoji,
+                                        customStickerPanel:
+                                            widget.customStickerPanel,
+                                        morePanelConfig: widget.morePanelConfig,
+                                        scrollController: autoController,
+                                        conversationID: _getConvID(),
+                                        conversationType: _getConvType(),
+                                        initText: TencentUtils.checkString(
+                                                widget.draftText) ??
+                                            (PlatformUtils().isWeb
+                                                ? TencentUtils.checkString(
+                                                    conversationViewModel
+                                                        .getWebDraft(
+                                                            conversationID: widget
+                                                                .conversation
+                                                                .conversationID))
+                                                : TencentUtils.checkString(
+                                                    widget.conversation
+                                                        .draftText)),
+                                        hintText: widget.textFieldHintText,
+                                        showMorePanel: widget
+                                                .config?.isAllowShowMorePanel ??
+                                            true,
+                                        showSendAudio: widget
+                                                .config?.isAllowSoundMessage ??
+                                            true,
+                                        showSendEmoji:
+                                            widget.config?.isAllowEmojiPanel ??
+                                                true,
+                                      ),
+                                    ));
+                            },
+                            selector: (c, model) {
+                              return model.isMultiSelect;
+                            },
+                          )
                         ],
                       ),
                       // if (_dragging)
