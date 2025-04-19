@@ -31,7 +31,7 @@ dependencies:
   video_player: ^2.9.0
   chewie: ^1.8.5
   flutter_slidable_plus_plus: ^0.1.0
-  flutter_plugin_record_plus: ^0.0.19
+  # flutter_plugin_record_plus: ^0.0.19
   azlistview_all_platforms: ^2.1.2
   lpinyin: ^2.0.3
   transparent_image: ^2.0.0

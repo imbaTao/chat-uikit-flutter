@@ -246,36 +246,36 @@ class _SendSoundMessageState extends TIMUIKitState<SendSoundMessage> {
   }
 
   initRecordSound(TUIChatSeparateViewModel model) {
-    final responseSubscription = SoundPlayer.responseListener((recordResponse) {
-      final status = recordResponse.msg;
-      if (status == "onStop") {
-        if (!isCancelSend) {
-          final soundPath = recordResponse.path;
-          final recordDuration = recordResponse.audioTimeLength;
-          sendSound(
-              path: soundPath!, duration: recordDuration!.ceil(), model: model);
-        }
-      } else if (status == "onStart") {
-        outputLogger.i("start record");
-        setState(() {
-          isRecording = true;
-        });
-      } else {
-        outputLogger.i(status.toString());
-      }
-    });
-    final amplitudesResponseSubscription =
-        SoundPlayer.responseFromAmplitudeListener((recordResponse) {
-      setState(() {
-        volume = double.parse(recordResponse.msg!) * 1.1;
-        if (overlayEntry != null) {
-          overlayEntry!.markNeedsBuild();
-        }
-      });
-    });
-    subscriptions = [responseSubscription, amplitudesResponseSubscription];
-    SoundPlayer.initSoundPlayer();
-    isInit = true;
+    // final responseSubscription = SoundPlayer.responseListener((recordResponse) {
+    //   final status = recordResponse.msg;
+    //   if (status == "onStop") {
+    //     if (!isCancelSend) {
+    //       final soundPath = recordResponse.path;
+    //       final recordDuration = recordResponse.audioTimeLength;
+    //       sendSound(
+    //           path: soundPath!, duration: recordDuration!.ceil(), model: model);
+    //     }
+    //   } else if (status == "onStart") {
+    //     outputLogger.i("start record");
+    //     setState(() {
+    //       isRecording = true;
+    //     });
+    //   } else {
+    //     outputLogger.i(status.toString());
+    //   }
+    // });
+    // final amplitudesResponseSubscription =
+    //     SoundPlayer.responseFromAmplitudeListener((recordResponse) {
+    //   setState(() {
+    //     volume = double.parse(recordResponse.msg!) * 1.1;
+    //     if (overlayEntry != null) {
+    //       overlayEntry!.markNeedsBuild();
+    //     }
+    //   });
+    // });
+    // subscriptions = [responseSubscription, amplitudesResponseSubscription];
+    // SoundPlayer.initSoundPlayer();
+    // isInit = true;
   }
 
   @override
