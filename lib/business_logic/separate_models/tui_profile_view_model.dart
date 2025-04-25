@@ -1,7 +1,13 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
-import 'package:tencent_im_base/tencent_im_base.dart';
+import 'package:tencent_cloud_chat_sdk/enum/friend_type_enum.dart';
+import 'package:tencent_cloud_chat_sdk/enum/receive_message_opt_enum.dart';
+import 'package:tencent_cloud_chat_sdk/models/v2_tim_callback.dart';
+import 'package:tencent_cloud_chat_sdk/models/v2_tim_conversation.dart';
+import 'package:tencent_cloud_chat_sdk/models/v2_tim_friend_info.dart';
+import 'package:tencent_cloud_chat_sdk/models/v2_tim_friend_operation_result.dart';
+import 'package:tencent_cloud_chat_sdk/models/v2_tim_user_full_info.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/life_cycle/profile_life_cycle.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/model/profile_model.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/view_models/tui_friendship_view_model.dart';
@@ -214,50 +220,41 @@ class TUIProfileViewModel extends ChangeNotifier {
     return res;
   }
 
-  updateUserInfo(String key, dynamic value) {
-    if (key == "nickName") {
-      _userProfile?.friendInfo!.userProfile?.nickName = value;
+  updateUserInfo(V2TimUserFullInfo userFullInfo) {
+    if (userFullInfo.nickName != null)  {
+      _userProfile?.friendInfo!.userProfile?.nickName = userFullInfo.nickName;
     }
-    if (key == "faceUrl") {
-      _userProfile?.friendInfo!.userProfile?.faceUrl = value;
+    if (userFullInfo.faceUrl != null) {
+      _userProfile?.friendInfo!.userProfile?.faceUrl = userFullInfo.faceUrl;
     }
-    if (key == "nickName") {
-      _userProfile?.friendInfo!.userProfile?.nickName = value;
+    if (userFullInfo.selfSignature != null) {
+      _userProfile?.friendInfo!.userProfile?.selfSignature = userFullInfo.selfSignature;
     }
-    if (key == "selfSignature") {
-      _userProfile?.friendInfo!.userProfile?.selfSignature = value;
+    if (userFullInfo.gender != null) {
+      _userProfile?.friendInfo!.userProfile?.gender = userFullInfo.gender;
     }
-    if (key == "gender") {
-      _userProfile?.friendInfo!.userProfile?.gender = value;
+    if (userFullInfo.allowType != null) {
+      _userProfile?.friendInfo!.userProfile?.allowType = userFullInfo.allowType;
     }
-    if (key == "allowType") {
-      _userProfile?.friendInfo!.userProfile?.allowType = value;
+    if (userFullInfo.customInfo != null) {
+      _userProfile?.friendInfo!.userProfile?.customInfo = userFullInfo.customInfo;
     }
-    if (key == "customInfo") {
-      _userProfile?.friendInfo!.userProfile?.customInfo = value;
+    if (userFullInfo.role != null) {
+      _userProfile?.friendInfo!.userProfile?.role = userFullInfo.role;
     }
-    if (key == "role") {
-      _userProfile?.friendInfo!.userProfile?.role = value;
+    if (userFullInfo.level != null) {
+      _userProfile?.friendInfo!.userProfile?.level = userFullInfo.level;
     }
-    if (key == "level") {
-      _userProfile?.friendInfo!.userProfile?.level = value;
-    }
-    if (key == "birthday") {
-      _userProfile?.friendInfo!.userProfile?.birthday = value;
+    if (userFullInfo.birthday != null) {
+      _userProfile?.friendInfo!.userProfile?.birthday = userFullInfo.birthday;
     }
   }
 
-  Future<V2TimCallback> updateSelfInfo(Map<String, dynamic> newSelfInfo) async {
-    final res = await _coreServices.setSelfInfo(
-      userFullInfo: V2TimUserFullInfo.fromJson(
-        newSelfInfo,
-      ),
-    );
+  Future<V2TimCallback> updateSelfInfo(V2TimUserFullInfo userFullInfo) async {
+    final res = await _coreServices.setSelfInfo(userFullInfo: userFullInfo);
 
     if (res.code == 0) {
-      newSelfInfo.forEach((key, value) {
-        updateUserInfo(key, value);
-      });
+      updateUserInfo(userFullInfo);
       notifyListeners();
     }
 
